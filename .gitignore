@@ -1,0 +1,8 @@
+
+tutorial-env/bin/activate
+tutorial-env/bin/*
+tutorial-env/*/*
+tutorial-env/bin/activate.csh
+tutorial-env/bin/python
+tutorial-env/lib/python3.10/site-packages/dateutil/__pycache__/easter.cpython-310.pyc
+tutorial-env/lib/python3.10/site-packages/dateutil/__pycache__/utils.cpython-310.pyc
