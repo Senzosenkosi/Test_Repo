@@ -1,6 +1,7 @@
 import pandas as ps 
 import streamlit as st
 print("welocome to my page")
+import time
 
 st.write("my first app is write here")
 st.balloons()
