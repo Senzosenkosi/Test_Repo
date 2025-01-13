@@ -12,7 +12,7 @@ st.title("Regression Model")
 
 fake =Faker()
 
-st.write(fake.nationality())
+st.write(fake.name())
 
 data = {
     'X': [1,2,3,4,56,66],
