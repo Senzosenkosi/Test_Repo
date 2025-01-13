@@ -4,5 +4,4 @@ matplotlib
 plotly
 pandas
 scikit-learn
-seaborn 
-matplotlib.
+seaborn
