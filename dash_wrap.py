@@ -6,7 +6,13 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 import seaborn as sns
+from  faker import Faker  # pip install faker
 
+st.title("Regression Model")
+
+fake =Faker()
+
+st.write(fake.nationality())
 
 data = {
     'X': [1,2,3,4,56,66],
