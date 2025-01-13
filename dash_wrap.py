@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+import sklearn as sk
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
@@ -12,6 +13,7 @@ df = pd.DataFrame(data)
  
 X = df[['X']]
 Y=df[['Y']]
+
 X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size=0.2, random_state=0)
 
 model = LinearRegression()
