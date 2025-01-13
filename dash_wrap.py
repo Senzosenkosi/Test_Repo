@@ -27,7 +27,7 @@ model.fit(X_train,Y_train)
 Y_pred = model.predict(X_test)
 mse = mean_squared_error(Y_test,Y_pred)
 
-st.markdown("## Regression Model Results")
+st.markdown("## Regression Model Results : Very basic my friend")
 st.write(f"Mean Squared Error: {mse}")
 st.write("Predictions:", Y_pred)
 st.write("Actual:", Y_test)
