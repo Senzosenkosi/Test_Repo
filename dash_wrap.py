@@ -6,7 +6,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 import matplotlib.pyplot as plt
 import seaborn as sns
-from  faker import Faker  # pip install faker
+from faker import Faker 
 
 st.title("Regression Model")
 
