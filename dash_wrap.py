@@ -1,13 +1,27 @@
-import pandas as ps 
+import pandas as pd
 import streamlit as st
-print("welocome to my page")
-import time
+from  sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
 
-st.write("my first app is write here")
-st.balloons()
-st.markdown("## Question 1.")
-countdown = st.empty()
-for i in range(30, 0, -1):
-    countdown.markdown(f"## Countdown: {i} seconds")
-    time.sleep(1)
-countdown.markdown("## Time's up!")
+
+data = {
+    'X': [1,2,3,4,56,66],
+    'Y': [2,3,4,5,6,7]
+}
+df = pd.DataFrame(data)
+ 
+X = df[['X']]
+Y=df[['Y']]
+X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size=0.2, random_state=0)
+
+model = LinearRegression()
+model.fit(X_train,Y_train)
+
+Y_pred = model.predict(X_test)
+mse = mean_squared_error(Y_test,Y_pred)
+
+st.markdown("## Regression Model Results")
+st.write(f"Mean Squared Error: {mse}")
+st.write("Predictions:", y_pred)
+st.write("Actual:", Y_test)
