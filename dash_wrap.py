@@ -23,5 +23,5 @@ mse = mean_squared_error(Y_test,Y_pred)
 
 st.markdown("## Regression Model Results")
 st.write(f"Mean Squared Error: {mse}")
-st.write("Predictions:", y_pred)
+st.write("Predictions:", Y_pred)
 st.write("Actual:", Y_test)
