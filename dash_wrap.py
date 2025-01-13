@@ -4,13 +4,18 @@ import sklearn as sk
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
+import matplotlib.pyplot as plt
+import seaborn as sns
+
 
 data = {
     'X': [1,2,3,4,56,66],
     'Y': [2,3,4,5,6,7]
 }
+
+
 df = pd.DataFrame(data)
- 
+
 X = df[['X']]
 Y=df[['Y']]
 
@@ -26,3 +31,7 @@ st.markdown("## Regression Model Results")
 st.write(f"Mean Squared Error: {mse}")
 st.write("Predictions:", Y_pred)
 st.write("Actual:", Y_test)
+
+fig, ax = plt.subplots()
+sns.regplot(x='X', y='Y', data=df, ax=ax)
+st.pyplot(fig)
